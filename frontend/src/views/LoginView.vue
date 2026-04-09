@@ -211,7 +211,7 @@ async function handleLogin() {
   width: 100px;
   height: 100px;
   margin: 0 auto 32px;
-  color: var(--primary-color);
+  color: #60a5fa;
   animation: pulse-glow 3s infinite ease-in-out;
 }
 
@@ -221,56 +221,49 @@ async function handleLogin() {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { filter: drop-shadow(0 0 20px rgba(14, 165, 233, 0.3)); }
-  50% { filter: drop-shadow(0 0 40px rgba(14, 165, 233, 0.6)); }
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3)); }
+  50% { filter: drop-shadow(0 0 40px rgba(96, 165, 250, 0.6)); }
 }
 
 .brand-title {
-  font-family: var(--font-display);
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 16px;
-  background: linear-gradient(90deg, #fff, var(--primary-color));
+  background: linear-gradient(90deg, #fff, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: 2px;
 }
 
 .brand-subtitle {
-  font-family: var(--font-body);
-  font-size: 16px;
-  color: var(--text-muted);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 48px;
   letter-spacing: 8px;
-  text-transform: uppercase;
 }
 
 .brand-features {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 32px;
 }
 
 .feature-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 20px 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  min-width: 100px;
 }
 
 .feature-item:hover {
-  background: rgba(14, 165, 233, 0.1);
-  border-color: rgba(14, 165, 233, 0.3);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .feature-icon {
@@ -279,13 +272,12 @@ async function handleLogin() {
 
 .feature-item span:last-child {
   font-size: 13px;
-  color: var(--text-regular);
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* 右侧表单区域 */
 .form-section {
-  width: 520px;
+  width: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -294,14 +286,13 @@ async function handleLogin() {
 
 .login-card {
   width: 100%;
-  background: rgba(24, 24, 27, 0.7);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 24px;
   padding: 48px 40px;
   box-shadow:
-    0 25px 50px -12px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+    0 25px 50px -12px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
 }
 
 .card-header {
@@ -310,16 +301,14 @@ async function handleLogin() {
 }
 
 .card-header h2 {
-  font-family: var(--font-display);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #1e293b;
   margin-bottom: 8px;
-  letter-spacing: 1px;
 }
 
 .card-header p {
-  color: var(--text-muted);
+  color: #64748b;
   font-size: 15px;
 }
 
@@ -329,14 +318,13 @@ async function handleLogin() {
 }
 
 .login-form :deep(.el-form-item) {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .login-form :deep(.el-form-item__label) {
-  color: var(--text-regular);
-  font-weight: 600;
+  color: #374151;
+  font-weight: 500;
   padding-bottom: 8px !important;
-  font-size: 14px;
 }
 
 .login-form :deep(.el-input) {
@@ -344,30 +332,26 @@ async function handleLogin() {
 }
 
 .login-form :deep(.el-input__wrapper) {
-  padding: 14px 16px;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  padding: 12px 16px;
+  box-shadow: 0 0 0 1px #e2e8f0 inset;
   transition: all 0.3s ease;
 }
 
 .login-form :deep(.el-input__wrapper:hover) {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0 0 0 1px #94a3b8 inset;
 }
 
 .login-form :deep(.el-input__wrapper.is-focus) {
-  box-shadow: 0 0 0 1px var(--primary-color) inset !important;
-  background-color: rgba(14, 165, 233, 0.05);
+  box-shadow: 0 0 0 2px #3b82f6 inset !important;
 }
 
 .login-form :deep(.el-input__inner) {
-  font-size: 16px;
+  font-size: 15px;
   height: 24px;
-  color: var(--text-primary);
 }
 
 .login-form :deep(.el-input__prefix .el-icon) {
-  color: var(--text-muted);
-  font-size: 18px;
+  color: #94a3b8;
 }
 
 /* 选项行 */
@@ -379,39 +363,38 @@ async function handleLogin() {
 }
 
 .form-options :deep(.el-checkbox__label) {
-  color: var(--text-muted);
+  color: #64748b;
   font-size: 14px;
 }
 
 .forgot-link {
-  color: var(--primary-color);
+  color: #3b82f6;
   font-size: 14px;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .forgot-link:hover {
-  color: var(--primary-hover);
+  color: #2563eb;
 }
 
 /* 登录按钮 */
 .login-btn {
   width: 100%;
-  height: 56px;
+  height: 52px;
   font-size: 16px;
-  font-weight: 700;
-  font-family: var(--font-display);
+  font-weight: 600;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   border: none;
-  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
   transition: all 0.3s ease;
   letter-spacing: 4px;
 }
 
 .login-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
 }
 
 .login-btn:active:not(:disabled) {
@@ -421,20 +404,20 @@ async function handleLogin() {
 /* 底部链接 */
 .card-footer {
   text-align: center;
-  color: var(--text-muted);
+  color: #64748b;
   font-size: 14px;
 }
 
 .register-link {
-  color: var(--primary-color);
+  color: #3b82f6;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   margin-left: 4px;
   transition: color 0.2s;
 }
 
 .register-link:hover {
-  color: var(--primary-hover);
+  color: #2563eb;
 }
 
 /* 响应式 */
