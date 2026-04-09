@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "sessions": {
+    "a66adde6e9024859ba9d19f1b6d28bbd": [
+      {
+        "expertId": "SeniorDeveloper",
+        "name": "Will",
+        "profession": "高级开发工程师",
+        "avatarUrl": "https://acc-1258344699.cos.accelerate.myqcloud.com/workbuddy/experts/avatars/02-Engineering/SeniorDeveloper/SeniorDeveloper.png",
+        "promptUrl": "https://acc-1258344699.cos.accelerate.myqcloud.com/workbuddy/experts/experts/02-Engineering/SeniorDeveloper/SeniorDeveloper_zh.md",
+        "usedAt": 1774427753186,
+        "industryId": "02-Engineering"
+      },
+      {
+        "expertId": "UiDesigner",
+        "name": "Sam",
+        "profession": "UI设计师",
+        "avatarUrl": "https://acc-1258344699.cos.accelerate.myqcloud.com/workbuddy/experts/avatars/01-Design/UiDesigner/UiDesigner.png",
+        "promptUrl": "https://acc-1258344699.cos.accelerate.myqcloud.com/workbuddy/experts/experts/01-Design/UiDesigner/UiDesigner_zh.md",
+        "usedAt": 1774427331232,
+        "industryId": "all"
+      }
+    ]
+  },
+  "lastUpdated": 1774427788737
+}
