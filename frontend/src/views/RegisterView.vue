@@ -260,7 +260,7 @@ async function handleRegister() {
   width: 100px;
   height: 100px;
   margin: 0 auto 32px;
-  color: #60a5fa;
+  color: var(--primary-color);
   animation: pulse-glow 3s infinite ease-in-out;
 }
 
@@ -270,49 +270,56 @@ async function handleRegister() {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3)); }
-  50% { filter: drop-shadow(0 0 40px rgba(96, 165, 250, 0.6)); }
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(14, 165, 233, 0.3)); }
+  50% { filter: drop-shadow(0 0 40px rgba(14, 165, 233, 0.6)); }
 }
 
 .brand-title {
-  font-size: 36px;
+  font-family: var(--font-display);
+  font-size: 42px;
   font-weight: 700;
   margin-bottom: 16px;
-  background: linear-gradient(90deg, #fff, #93c5fd);
+  background: linear-gradient(90deg, #fff, var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  letter-spacing: 2px;
 }
 
 .brand-subtitle {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-muted);
   margin-bottom: 48px;
   letter-spacing: 8px;
+  text-transform: uppercase;
 }
 
 .brand-features {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 24px;
 }
 
 .feature-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 12px;
+  padding: 20px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  min-width: 100px;
 }
 
 .feature-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.3);
   transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .feature-icon {
@@ -321,12 +328,13 @@ async function handleRegister() {
 
 .feature-item span:last-child {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-regular);
+  font-weight: 600;
 }
 
 /* 右侧表单区域 */
 .form-section {
-  width: 480px;
+  width: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,13 +343,14 @@ async function handleRegister() {
 
 .login-card {
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(24, 24, 27, 0.7);
   border-radius: 24px;
   padding: 48px 40px;
   box-shadow:
-    0 25px 50px -12px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .card-header {
@@ -350,14 +359,16 @@ async function handleRegister() {
 }
 
 .card-header h2 {
-  font-size: 28px;
+  font-family: var(--font-display);
+  font-size: 32px;
   font-weight: 700;
-  color: #1e293b;
+  color: var(--text-primary);
   margin-bottom: 8px;
+  letter-spacing: 1px;
 }
 
 .card-header p {
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 15px;
 }
 
@@ -367,13 +378,14 @@ async function handleRegister() {
 }
 
 .login-form :deep(.el-form-item) {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .login-form :deep(.el-form-item__label) {
-  color: #374151;
-  font-weight: 500;
+  color: var(--text-regular);
+  font-weight: 600;
   padding-bottom: 8px !important;
+  font-size: 14px;
 }
 
 .login-form :deep(.el-input) {
@@ -381,45 +393,50 @@ async function handleRegister() {
 }
 
 .login-form :deep(.el-input__wrapper) {
-  padding: 12px 16px;
-  box-shadow: 0 0 0 1px #e2e8f0 inset;
+  padding: 14px 16px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
   transition: all 0.3s ease;
 }
 
 .login-form :deep(.el-input__wrapper:hover) {
-  box-shadow: 0 0 0 1px #94a3b8 inset;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
 }
 
 .login-form :deep(.el-input__wrapper.is-focus) {
-  box-shadow: 0 0 0 2px #3b82f6 inset !important;
+  box-shadow: 0 0 0 1px var(--primary-color) inset !important;
+  background-color: rgba(14, 165, 233, 0.05);
 }
 
 .login-form :deep(.el-input__inner) {
-  font-size: 15px;
+  font-size: 16px;
   height: 24px;
+  color: var(--text-primary);
 }
 
 .login-form :deep(.el-input__prefix .el-icon) {
-  color: #94a3b8;
+  color: var(--text-muted);
+  font-size: 18px;
 }
 
 /* 注册按钮 */
 .login-btn {
   width: 100%;
-  height: 52px;
+  height: 56px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: var(--font-display);
   border-radius: 12px;
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, #0284c7 100%);
   border: none;
-  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
   transition: all 0.3s ease;
   letter-spacing: 4px;
 }
 
 .login-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 12px 28px rgba(14, 165, 233, 0.4);
 }
 
 .login-btn:active:not(:disabled) {
@@ -429,20 +446,20 @@ async function handleRegister() {
 /* 底部链接 */
 .card-footer {
   text-align: center;
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 14px;
 }
 
 .register-link {
-  color: #3b82f6;
+  color: var(--primary-color);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   margin-left: 4px;
   transition: color 0.2s;
 }
 
 .register-link:hover {
-  color: #2563eb;
+  color: var(--primary-hover);
 }
 
 /* 响应式 */

@@ -21,22 +21,31 @@ import ProjectTree from '@/components/ProjectTree/index.vue'
   display: flex;
   height: 100%;
   overflow: hidden;
+  background: var(--bg-panel);
 }
 .tree-panel {
-  width: 260px;
-  border-right: 1px solid #e4e7ed;
+  width: 280px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
   overflow-y: auto;
   flex-shrink: 0;
+  background: rgba(0, 0, 0, 0.1);
 }
 .content-panel {
   flex: 1;
   overflow: hidden;
   position: relative;
+  background: transparent;
 }
 .empty-hint {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  flex-direction: column;
+}
+.empty-hint :deep(.el-empty__description) {
+  color: var(--text-muted);
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 </style>
